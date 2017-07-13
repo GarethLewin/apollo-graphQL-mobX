@@ -12,3 +12,7 @@ export default class ContactViewer extends React.Component {
         )
     }
 }
+
+ContactViewer.propTypes = {
+    syncStore: React.PropTypes.object
+};

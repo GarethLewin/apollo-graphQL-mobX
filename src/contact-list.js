@@ -62,3 +62,10 @@ export default class ContactList extends React.Component {
         )
     }
 }
+ContactList.propTypes = {
+    contacts: React.PropTypes.object,
+    error: React.PropTypes.object,
+    loading: React.PropTypes.bool,
+    refetch: React.PropTypes.func,
+    createContact: React.PropTypes.func
+};

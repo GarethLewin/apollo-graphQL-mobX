@@ -31,3 +31,9 @@ export default class ContactViewer extends React.Component {
         )
     }
 }
+
+ContactViewer.propTypes = {
+    contacts: React.PropTypes.object,
+    error: React.PropTypes.object,
+    loading: React.PropTypes.bool
+};
