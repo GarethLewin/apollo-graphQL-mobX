@@ -7,7 +7,7 @@ export default class ContactViewer extends React.Component {
         return (
             <div>
                 <div>Component 3 (MobX)</div>
-                <input type="text" value={this.props.syncStore.selectedContact.name}/>
+                <input type="text" value={this.props.syncStore.selectedContact.name} />
             </div>
         )
     }

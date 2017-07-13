@@ -29,25 +29,19 @@ const addContactMutation = gql`
 @withMutation(addContactMutation)
 @inject('syncStore') @observer
 export default class ContactList extends React.Component {
-    syncStore;
-    constructor(props) {
-        super(props);
-        this.syncStore = this.props.syncStore;
-    }
     itemSelected = (contactInfo) => {
-        this.syncStore.setSelectedContact(contactInfo);
-    }
+        this.props.syncStore.setSelectedContact(contactInfo);
+    };
     async save() {
         try {
-            const result = await this.props.createContact({
+            await this.props.createContact({
                 id: Date.now(),
                 name: 'Dilip ' + Date.now(),
                 city: 'Gurgaon'
-            })
-            console.log('Success', result);
+            });
             this.props.refetch();
         } catch (error) {
-            console.log('Error', error)
+            console.log('Error', error);
         }
     }
     render() {
