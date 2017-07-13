@@ -1,10 +1,6 @@
-GraphQL Contacts
+Getting Started
 ================
 
-<img src="assets/screen-shot.png">
-
-Getting started
----------------
 Ensure you have [graphql-contacts-server](https://github.com/sapientglobalmarkets/graphql-contacts-server) installed and running first, then:
 
 ```bash
